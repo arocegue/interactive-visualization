@@ -17,7 +17,7 @@ d3.json("https://2u-data-curriculum-team.s3.amazonaws.com/dataviz-classroom/v1.1
     //Grab ID corresponding to object.
     let id = parseInt(d3.select("#selDataset").property("value"))
 
-
+    d3.select("#sample-metadata").html(null);
     //Set Metadata in demographic info field.
     for (const [key, value] of Object.entries(metadata[id])) {
       d3.select("#sample-metadata").append("p").text(`${key}: ${value}`)
