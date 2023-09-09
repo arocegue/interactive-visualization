@@ -24,7 +24,7 @@ d3.json("https://2u-data-curriculum-team.s3.amazonaws.com/dataviz-classroom/v1.1
     }
 
 
-
+    //Create Traces
     let trace1 = {
       x: samples[id]["sample_values"].slice(0, 10).reverse(),
       y: samples[id]["otu_ids"].slice(0, 10).map(element => "OTU " + String(element)).reverse(),
@@ -43,10 +43,9 @@ d3.json("https://2u-data-curriculum-team.s3.amazonaws.com/dataviz-classroom/v1.1
       },
 
     };
-
+    //Create Layouts
     let data = [trace1];
     let data2 = [trace2]
-    let data3 = [trace3]
     let layout = {
       title: "Top Ten OTU ID's",
       autosize: true,
